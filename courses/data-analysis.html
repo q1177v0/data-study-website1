@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python基础 | 蔡欣淇 学习平台</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 返回首页按钮 -->
+        <a href=" " class="back-btn">← 返回首页</a >
+
+        <h2>Python 基础</h2>
+        <p style="color:#4a5568;margin:10px 0;">练习Python基础语法、变量、循环、函数</p >
+
+        <div class="code-box">
+            <textarea id="codeEditor"># 在这里编写Python代码
+print("Hello Python")
+a = 10
+b = 20
+print(a + b)
+</textarea>
+            <button class="run-btn" onclick="runCode('codeEditor','outputArea')">运行代码</button>
+            <div id="outputArea" class="output">运行结果将展示在这里</div>
+        </div>
+    </div>
+
+    <!-- 引入Python运行环境 -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+    <script src="../js/run.js"></script>
+</body>
+</html>

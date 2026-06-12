@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>市场数据调查 | 蔡欣淇 学习平台</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href=" " class="back-btn">← 返回首页</a >
+
+        <h2>市场数据调查</h2>
+        <p style="color:#94a3b8;margin:10px 0;">问卷数据、用户偏好、满意度统计分析</p >
+
+        <div class="code-box">
+            <textarea id="codeEditor">import pandas as pd
+df = pd.DataFrame({
+    "性别":["男","女","男","女"],
+    "意向产品":["A","B","B","A"],
+    "意向度":[7,8,6,9]
+})
+print("市场调研问卷数据：")
+print(df)
+
+# 不同性别平均意向度
+user_avg = df.groupby("性别")["意向度"].mean()
+print("\n不同性别平均意向度：")
+print(user_avg)
+</textarea>
+            <button class="run-btn" onclick="runCode('codeEditor','outputArea')">运行代码</button>
+            <div id="outputArea" class="output">运行结果将展示在这里</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+    <script src="../js/run.js"></script>
+</body>
+</html>
